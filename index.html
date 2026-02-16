@@ -3,18 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Company Website</title>
 </head>
 <body>
     <header>
-        <h1>Aldridge Industries</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
-            <rect width="100" height="100" fill="#00A9E0" />
-            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="20">Aldridge</text>
-        </svg>
+        <h1>Welcome to Our Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <p>Welcome to Aldridge Industries!</p>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <p>Description of service 1.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Service 2</h3>
+                    <p>Description of service 2.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Service 3</h3>
+                    <p>Description of service 3.</p>
+                </div>
+            </div>
+        </section>
+        <section id="spindle-repair">
+            <h2>Spindle Repair Form</h2>
+            <form action="/submit-repair" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="description">Description of Issue:</label>
+                <textarea id="description" name="description" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2026 Your Company Name</p>
+    </footer>
 </body>
 </html>
