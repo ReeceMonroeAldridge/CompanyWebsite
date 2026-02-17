@@ -3,12 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldridge Industries</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Company Website</title>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="logo.png" alt="Company Logo" class="logo">
-    </div>
+    <header>
+        <img src="logo.png" alt="Aldridge Industries Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to Aldridge Industries</h1>
+        <p>Your partner in quality industrial solutions.</p>
+        <a href="#services" class="cta-button">Our Services</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">Service 1</div>
+            <div class="service-item">Service 2</div>
+            <div class="service-item">Service 3</div>
+            <div class="service-item">Service 4</div>
+            <div class="service-item">Service 5</div>
+            <div class="service-item">Service 6</div>
+        </div>
+    </section>
+
+    <section id="spindle-repair-form">
+        <h2>Request Spindle Repair</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="description">Description of Issue:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <ul>
+            <li>Benefit 1</li>
+            <li>Benefit 2</li>
+            <li>Benefit 3</li>
+            <li>Benefit 4</li>
+            <li>Benefit 5</li>
+            <li>Benefit 6</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@aldridgeindustries.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aldridge Industries. All rights reserved.</p>
+    </footer>
 </body>
 </html>
