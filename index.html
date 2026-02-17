@@ -3,78 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldridge Industries</title>
+    <title>Aldridge Industries - Machine Service & Support</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation & Header -->
     <header>
-        <img src="logo.png" alt="Aldridge Industries Logo" class="logo">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <!-- Aldridge Industries Logo -->
+                <img src="logo.png" alt="Aldridge Industries Logo" class="logo">
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#spindle-form">Spindle Repair</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to Aldridge Industries</h1>
-        <p>Your partner in quality industrial solutions.</p>
-        <a href="#services" class="cta-button">Our Services</a>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-item">Service 1</div>
-            <div class="service-item">Service 2</div>
-            <div class="service-item">Service 3</div>
-            <div class="service-item">Service 4</div>
-            <div class="service-item">Service 5</div>
-            <div class="service-item">Service 6</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Machine Service Excellence</h1>
+            <p>Your Trusted Partner for CNC & Industrial Machine Support</p>
+            <p class="tagline">Specialized in repair, rebuilding, and precision spindle service across aerospace, defense, and advanced manufacturing</p>
+            <button class="cta-button">Get Your Quote Today</button>
         </div>
     </section>
 
-    <section id="spindle-repair-form">
-        <h2>Request Spindle Repair</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Services Overview Section -->
+    <section id="services" class="services">
+        <h2>Our Core Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Machine Repair & Field Service</h3>
+                <p>Comprehensive mechanical and electrical repair services for CNC and industrial machinery with on-site diagnostics and component replacement.</p>
+            </div>
+            <div class="service-card">
+                <h3>Machine Rebuilding & Retrofitting</h3>
+                <p>Full and partial machine rebuilds designed to extend equipment life and modernize controls for cost-effective alternatives to replacement.</p>
+            </div>
+            <div class="service-card">
+                <h3>Spindle Rebuilds & Precision Service</h3>
+                <p>Expert spindle inspection, repair, and rebuild services with bearing replacement, preload setting, and runout verification.</p>
+            </div>
+            <div class="service-card">
+                <h3>Machine Installation & Alignment</h3>
+                <p>Complete machine installations including offloading, rigging, placement, leveling, and precision alignment for production readiness.</p>
+            </div>
+            <div class="service-card">
+                <h3>Infrastructure & Contracting</h3>
+                <p>Contracting support for machine foundations, equipment pads, and facility readiness coordination from site preparation to commissioning.</p>
+            </div>
+            <div class="service-card">
+                <h3>Preventive Maintenance</h3>
+                <p>Customized preventive maintenance programs to reduce unplanned downtime, improve reliability, and extend equipment life.</p>
+            </div>
+        </div>
+    </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <!-- Featured: Spindle Repair Form Section -->
+    <section id="spindle-form" class="spindle-section">
+        <h2>Spindle Repair & Rebuild Services</h2>
+        <p class="section-intro">Need precision spindle service? Submit your inquiry below and our team will contact you within 24 hours with a customized quote.</p>
+        
+        <form class="inquiry-form" action="form-handler.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Contact Name *</label>
+                    <input type="text" id="contact-name" name="contact_name" required>
+                </div>
+            </div>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
 
-            <label for="description">Description of Issue:</label>
-            <textarea id="description" name="description" required></textarea>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="machine-brand">Machine/Spindle Brand</label>
+                    <input type="text" id="machine-brand" name="machine_brand" placeholder="e.g., Haas, Okuma, DN Solutions">
+                </div>
+                <div class="form-group">
+                    <label for="service-type">Service Type *</label>
+                    <select id="service-type" name="service_type" required>
+                        <option value="">-- Select Service Type --</option>
+                        <option value="Spindle Repair">Spindle Repair</option>
+                        <option value="Spindle Rebuild">Spindle Rebuild</option>
+                        <option value="Bearing Replacement">Bearing Replacement</option>
+                        <option value="Runout Verification">Runout Verification</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
 
-            <input type="submit" value="Submit">
+            <div class="form-group">
+                <label for="description">Describe Your Spindle Issue or Service Needs *</label>
+                <textarea id="description" name="description" rows="5" placeholder="Please provide details about your spindle condition, symptoms, or specific requirements..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="urgency">Urgency Level</label>
+                <select id="urgency" name="urgency">
+                    <option value="Standard">Standard (1-2 weeks)</option>
+                    <option value="Expedited">Expedited (3-5 days)</option>
+                    <option value="Emergency">Emergency (ASAP)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Spindle Repair Inquiry</button>
+            <p class="form-note">* Required fields. We'll review your submission and contact you shortly.</p>
         </form>
     </section>
 
-    <section id="why-choose-us">
-        <h2>Why Choose Us</h2>
-        <ul>
-            <li>Benefit 1</li>
-            <li>Benefit 2</li>
-            <li>Benefit 3</li>
-            <li>Benefit 4</li>
-            <li>Benefit 5</li>
-            <li>Benefit 6</li>
-        </ul>
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <h2>Why Choose Aldridge Industries?</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <h3>Local Expertise</h3>
+                <p>Based in Madison, Alabama with extensive regional coverage and local knowledge</p>
+            </div>
+            <div class="benefit">
+                <h3>Experienced Team</h3>
+                <p>Skilled technicians and engineers with hands-on expertise in mechanical, electrical, and control systems</p>
+            </div>
+            <div class="benefit">
+                <h3>Industry Sectors</h3>
+                <p>Proven experience supporting aerospace, defense, energy, and advanced manufacturing</p>
+            </div>
+            <div class="benefit">
+                <h3>Multi-Brand Support</h3>
+                <p>Expertise with Haas, Okuma, DN Solutions, Hermle, Mazak, Gurutzpe, and legacy platforms</p>
+            </div>
+            <div class="benefit">
+                <h3>Rapid Response</h3>
+                <p>Quick deployment to minimize downtime and keep your operations running</p>
+            </div>
+            <div class="benefit">
+                <h3>Quality Focused</h3>
+                <p>Strong emphasis on documentation, safety, and quality control in every service</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@aldridgeindustries.com</p>
-        <p>Phone: (123) 456-7890</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>📞 YOUR_PHONE_NUMBER</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>📧 YOUR_EMAIL_ADDRESS</p>
+            </div>
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>📍 Madison, Alabama</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Aldridge Industries. All rights reserved.</p>
+        <p>&copy; 2026 Aldridge Industries. All rights reserved. | Specialized Machine Service & Support</p>
     </footer>
 </body>
 </html>
